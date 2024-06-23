@@ -1,0 +1,142 @@
+Datos primiitovs, como se usas para qeu sriven 
+objetos arreglso funciones, funcones de flecha. retornos a las funciones.
+
+En esta sección tocaremos los siguientes temas:
+
+¿Qué son los primitivos?
+
+Palabras reservadas
+
+Arreglos
+
+Objetos literales
+
+Funciones básicas
+
+Funciones de flecha
+
+Retorno de las funciones
+
+Ejercicios y ejemplos con cada tipo expuesto
+
+Javascript es un lenguaje debilemtne tipado, osea qeu no deifnimos el tipo de datos sino que Javascript lo define por noostors.
+
+Primitivos no es un objeto y son inmutables:
+Booolean true flase 
+Null Sin valor en lo ablsoluto
+Undefeniden Una varible declarada que no tiene un valor asigando
+Number integers floats,etc, para javscript es lo mismo 1 con 1.000000001
+String Una cadena de carcteraes. Palabras, nombre de perosnas.
+Symbol es un valro unicos que no es giual a ningun otro valro. Dos simbosl nunca son iguales.
+
+
+Las comillas simples las dobles, y los back son para delcarar strings, si colcoamso esto javasccript va a defnir que es string, caso contrario ira a buscar si existe una variable o vera si es numero u otra cosas.
+
+Una recoemndacion es usar camelCase en javasccript
+Nota en python esta el snakesae que separa con guion. es Nota
+
+No se pero se puede decir qeu en javascript tood es obejtov menos los prmiitovs.
+
+El symbol el pricnipala usso de este, idenfiticar propeidades de manera unica.Permietes cocloar idenfitifcaodres unicos a javascript
+
+Palabras reservadas...
+
+Tienen un uso especifico, solo se usan para lo que fueron usadas.
+No usar nomres de variale con caracteres extranios
+
+No se puede iniciar nombres con numeros, tampco se peude tener puntos en medio. oner nombre con algo significado
+
+Palabras reservadas
+break export super
+case extends switch
+catch finally this
+class for throw
+const function try
+continue if typeof
+debugger import var
+default in void
+delete instanceof while
+do new with
+else return yield
+let
+
+Palabras reservadas en un futuro
+
+enum package public
+implements private static
+interface protected await
+
+Evitar usar
+null undefined true
+false hasOwnProperty undefined
+isNaN Infinity isFinite
+NaN length Math
+isPrototypeOf prototype valueOf
+name Number Object
+String toString prompt
+alert conform
+
+
+ARREGLOS...
+
+Son un objeto pareicdo a una lista de informacoin qeu tiene un gurpo de elentos, generlamente dendo de un arreglo son el mismo tipo de datos, generalmente.
+Com oen los demas los arrelgos empeizas desde la posicones 0.
+
+En los arrelgos podemos guardar funciones, objetos, podemos agregar otro arreglo.
+
+Los arrelgos tiene el lengh que nos dice el tama;o del arreglo, exsit eel forecha donde va el elemento, el indice y ael arrglo que ira imrpomiedno uno a uno.
+
+El push es para agregar uno nuevo, al final
+
+El unshift es para agregar cosas al inicio.
+
+El pop elimian el ultimo elemento del arreglo.
+
+El splice recibe la psicones qeu quieor borrar y aucantos elementos apartir de esto elmino 
+Para saber psicones es indexOf, y especifacmos qu euqermos buscar, el -1 es que no lo encotro.
+
+Objetos literales...
+
+Javascript tiene dos tipos de datos pricipales es objetos y prmitivos. si no es prmitivos es objetos y viceversa.
+Variable no es el termno adecaudo sino objetos que tiene valors.
+
+Si esta en llaves es objeto, y podemos cooclar objestos anidaso concolando el nobmre y luego las llaves, recordas qeu se deben serpar por coma, podemos agregar los arreglos qeu queramos.
+En la imrpesio de chrome se hace de manera alfabetica.
+
+podemos colcoar un nobmre con carcteres especiaels coocoando en comillas ismples.
+
+Para borrar la propiedas del objeto es con delete antes de lap rocpeida que se qeurie elminar.
+
+Tenesmo funconalidad comos el object entreis,
+o el objetect freeze, deja que no se epudan cambiar nada respoeto al objeto, pero a los anidados a el si 
+
+Pdemos obetner las propeiedeas como arreglo en elodern como fuerno creadas.
+
+El values no permite obetenr un arargleo con los valores.
+
+Para agregar una proporiedas solo coclamso el objeto y alado la propeoidad.
+
+Funcones...
+
+Cuando necesitoasmo hacer algo varias veces, es donde usmaos una fucnion.
+
+metodo es una ufncons que se encuntra dentro de una funconalidad
+
+en javascript sabemos queu hace dos barriados podemos declarar las fucones al final igual van ahcer accsbiles, pero leugo lo reomcendalbe es ahcerlo al inico.
+tenemos la ufcnoies anonioma que podenmos asignarla como uan vaiable. const saludro =fucniotn(){cosnoel.log hola mudno}
+
+entonces si asigamson a una ocnostate la fucno es qeu no pueda ser reutilizado es decir modificado.
+
+si quermos que reciba un parametor solo colamos lo que queira que reciba
+
+todas las fucnoes tradicioensle tiene algo que se llama argumentes es todo lo que reciba la fucione 
+
+La funcion de flecha va la delcarion edespues del gial viene el paratesis que dice que es una funcion  luego la flecha con igual y mayo  y las llaves
+y hace lo miso los que ldemas y si qeuiremos un argumentos se colca en el parentisits de igual forma
+
+cada fucno qeu se hizo retorna un valor, si no tiene la palabra return que es la palabra explsiicta para esto no lo hace, entonces retorna undefine.
+
+Todo lo que vaya leugo del return no se ejecuta
+
+
+El ...arg hace uan creacion de arrelg con todos los argumentos, que recibe la fucnon
