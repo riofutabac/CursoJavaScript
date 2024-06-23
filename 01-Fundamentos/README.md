@@ -1,6 +1,6 @@
 
 
-# Curso de JavaScript
+# 01-Fundamentos
 
 ## Introducción
 
