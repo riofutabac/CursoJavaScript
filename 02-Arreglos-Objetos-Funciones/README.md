@@ -1,5 +1,5 @@
 
-# Curso de JavaScript
+# 02- Arreglos Objetos Funciones
 
 ## Tabla de Contenidos
 
