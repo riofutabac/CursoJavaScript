@@ -13,11 +13,6 @@
 - [Retorno de las Funciones](#retorno-de-las-funciones)
 - [Ejercicios y Ejemplos](#ejercicios-y-ejemplos)
 
-## Introducción
-
-Este documento contiene apuntes y ejemplos básicos de JavaScript, diseñados para que cualquier persona pueda entenderlos y utilizarlos como guía.
-
-JavaScript es un lenguaje débilmente tipado, lo que significa que no es necesario definir el tipo de datos, ya que JavaScript lo hace automáticamente.
 
 ## Datos Primitivos
 
