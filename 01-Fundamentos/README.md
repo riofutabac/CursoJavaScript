@@ -2,10 +2,6 @@
 
 # 01-Fundamentos
 
-## Introducción
-
-Este documento contiene apuntes y ejemplos básicos de JavaScript. A continuación, se presenta una explicación detallada y mejorada de los conceptos fundamentales y ejemplos prácticos.
-
 ## Consola y Métodos de Salida
 
 Para mostrar mensajes en la consola de JavaScript, usamos el objeto `console` y sus métodos:
