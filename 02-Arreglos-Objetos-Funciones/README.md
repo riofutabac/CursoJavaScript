@@ -2,8 +2,6 @@
 # 02- Arreglos Objetos Funciones
 
 ## Tabla de Contenidos
-
-- [Introducción](#introducción)
 - [Datos Primitivos](#datos-primitivos)
 - [Palabras Reservadas](#palabras-reservadas)
 - [Arreglos](#arreglos)
