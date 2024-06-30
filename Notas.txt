@@ -1,52 +1,19 @@
-Ciclos y Estructuras de control
+Temas de la sección
 
 En esta sección tocaremos los siguientes temas:
 
-Estructuras de control de flujo
+Trabajar con arreglos
 
-Paso de variables por valor y por referencia
+Mezclar los valores de los arreglos
 
-Romper referencia de objetos
+Introducción a la manipulación del DOM
 
-If y Else
+Eventos
 
-Un poco sobre lógica booleana
+Crear imágenes en la página
 
-Operadores y operadores de asignación
+Realizar la lógica para implementar un competidor de cartas.
 
-Operador condicional ternario
+Esta sección es bien divertida (al menos eso espero), haremos un juego que nos enseñará muchas cosas de JavaScript.
 
-Diferentes usos del operador condicional ternario
-
-Switch
-
-While
-
-Do While
-
-For
-
-For in
-
-For of
-
-
-
-En javasccript todos los objetos son pasados por referencia.
-
-En el  if se espera el valor boleano sea ture o false, solo  en el caso de que sea verdad se ejecuta elcodigo del parentesis.
-
-Cuando hacemos una delcarionde un operador if else, debemos tener en cuenta la cnatidad de iguales, en el caso de qeu tenga una hace una asigancion en caso de tener dos iguales es un coampracin del valor y convierte el tipo de daot  y env caso de hacerlo en con 3 iguales permite hacerlo estrictametne diciendo que el tipo de dato y el conetnid odeben de ser iguaels.
-
-Un pequeno recordacion, los objetos vane n llaves y los arryas encorchetes.
-
-La logica boelana se refiere a manejar los balores boelanos.
-
-Con el backtick podemos hacer otro estilo de concactenxion de strings 
-La condicion luego el signo lo que psaria si se cumple y el else se represetna con el ? y va el else.
-qeudaria asi condicion en parentiesis, el entocnes con el ? y el else o caso contrio con el :
-
-en los while lo qeu hace el continue es seguir ejecutando el codigo de nates.
-
-los i de los for so ndiferent porque son let y estos se trratn de amenra difernete.
 
