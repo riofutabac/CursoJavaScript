@@ -17,3 +17,4 @@ Realizar la lógica para implementar un competidor de cartas.
 Esta sección es bien divertida (al menos eso espero), haremos un juego que nos enseñará muchas cosas de JavaScript.
 
 
+Tener accesos dinamico con los elementos html dom.
