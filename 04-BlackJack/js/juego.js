@@ -88,14 +88,23 @@ const turnoCrupier = () => {
 };
 
 
+const mostrarResultado = (mensaje) => {
+    const resultadoDiv = document.getElementById('resultado');
+    if (resultadoDiv) {
+        resultadoDiv.textContent = mensaje;
+        resultadoDiv.style.display = 'block';
+    } else {
+        console.error('Elemento de resultado no encontrado');
+    }
+};
 const determinarGanador = () => {
-    const mensaje = (puntosJugador > 21) ? 'Crupier gana' :
-                    (puntosCrupier > 21) ? 'Jugador gana' :
-                    (puntosJugador > puntosCrupier) ? 'Jugador gana' :
-                    (puntosJugador < puntosCrupier) ? 'Crupier gana' :
-                    'Empate';
+    const mensaje = (puntosJugador > 21) ? '¡Te has pasado! Crupier gana.' :
+                    (puntosCrupier > 21) ? '¡Crupier se ha pasado! ¡Ganaste!' :
+                    (puntosJugador > puntosCrupier) ? '¡Felicidades! Has ganado.' :
+                    (puntosJugador < puntosCrupier) ? 'Crupier gana. ¡Mejor suerte la próxima!' :
+                    '¡Empate!';
 
-    alert(mensaje);
+    mostrarResultado(mensaje);
 };
 
 // Crea la baraja 
