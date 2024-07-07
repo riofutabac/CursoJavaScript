@@ -18,3 +18,24 @@ Esta sección es bien divertida (al menos eso espero), haremos un juego que nos 
 
 
 Tener accesos dinamico con los elementos html dom.
+Buena practica trabajr con querySelector. donde va la referencia al docuemtno y y lo que necesito.
+el query selector busca el tag que pongas el nombre, ahora si necesitamos la clase es . y # de la misma forma que en css.
+Podemos ahcer el mismo resutlado con getelemtnby classname y solo ponemos el nombre, se reomoenicunta coger como qeury selector.
+document.querySelector('header h1').innerText="Alel"
+el inner text sirve para colcoar un texto dentr
+Podemos guardar los elemntos en variables. const totalJugador = document.querySelector("#total-jugador")
+
+el createEleemnt crea un elemento const const botonNuevo = document.createElement('button')
+para anadir una cosa tneemos el apend.
+ahora bien necesitamos agregar clases tnemeso el classList.add, si ncesitmoas agregar id es elemento.id='elemento'.
+
+Si necestitamos escucahr un eevneto btnpedir.AddEnvetlistneer, el primero es ele evneto que estamos escuchando.y luego se envia lo del callback, practimcanete me dice que si le da click en el boton se va ahcer lo de la fucnoin
+    //Crear este elemento 
+    //img class="carta" src="/04-BlackJack/assets/cartas/2C.png" alt="Tu carta"\
+    const img = document.createElement('img'); //creamos el <img>
+    img.classList.add(carta);// <img class='carta'>
+    let srcImg = `/04-BlackJack/assets/cartas/${carta}.png`;
+    img.src = srcImg;// img class="carta" src="/04-BlackJack/assets/cartas/2C.png"
+    divsCartasJugador.append(img);
+
+Para poder desactivar un bton neceisto colcoar el   btnPedir.disabled = true;, en un console log permite colcoar codigo de JavaScript${carta}

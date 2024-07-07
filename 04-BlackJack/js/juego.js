@@ -14,6 +14,19 @@ const tiposCartas = ['C', 'D', 'H', 'S'];
 
 const cartasMayor = ['J', 'Q', 'K', 'A'];
 
+let puntosJugador=0, puentosMaquina=0;
+
+let puntosCrupier = 0;
+const totalCrupier = document.querySelector('#total-crupier');
+const divsCartasCrupier = document.querySelector('#cartas-crupier');
+
+//Referencias de html /id="pedir-carta"/ id="plantarse"/  id="nueva-partida"/ id="total-jugador" / id="cartas-jugador"
+const btnPedir = document.querySelector('#pedir-carta');
+const btnPlantarse = document.querySelector('#plantarse');
+const btnNuevaPartida = document.querySelector('#nueva-partida');
+const totalJugador = document.querySelector('#total-jugador');
+const divsCartasJugador =  document.querySelector('#cartas-jugador');
+
 
 const crearDeck = () => {
     for(i = 2; i <= 10; i++){
@@ -39,9 +52,7 @@ const pedirCarta = () => {
     }
 
     let cartasTotales = deck.length;
-    console.log('Cartas totales:', cartasTotales);
     let numeroAleatorio = _.random(0, cartasTotales - 1);
-    console.log('Índice aleatorio:', numeroAleatorio);
     
     // Extraemos la carta del deck
     const carta = deck.splice(numeroAleatorio, 1)[0]; 
@@ -56,14 +67,90 @@ const valorCarta = (carta) => {
 }
 
 
+const turnoCrupier = () => {
+    do {
+        const carta = pedirCarta();
+        puntosCrupier += valorCarta(carta);
+        totalCrupier.innerText = puntosCrupier;
+
+        const imgCrupier = document.createElement('img');
+        imgCrupier.classList.add('carta');
+        imgCrupier.src = `/04-BlackJack/assets/cartas/${carta}.png`;
+        divsCartasCrupier.append(imgCrupier);
+
+        if (puntosJugador > 21) break;
+
+    } while (puntosCrupier < 17 && puntosCrupier < puntosJugador);
+
+    setTimeout(() => {
+        determinarGanador();
+    }, 100);
+};
+
+
+const determinarGanador = () => {
+    const mensaje = (puntosJugador > 21) ? 'Crupier gana' :
+                    (puntosCrupier > 21) ? 'Jugador gana' :
+                    (puntosJugador > puntosCrupier) ? 'Jugador gana' :
+                    (puntosJugador < puntosCrupier) ? 'Crupier gana' :
+                    'Empate';
+
+    alert(mensaje);
+};
+
 // Crea la baraja 
 deck = crearDeck();
 console.log(deck);
-
-cartaJugador = pedirCarta();
-console.log('Carta extraída:', cartaJugador);
 console.log('Cartas totales:',deck.length);
-console.log('Valor de la carta:', valorCarta(cartaJugador));
+
+
+
+//Eventos 
+btnPedir.addEventListener('click', function(){
+    const carta = pedirCarta();
+    puntosJugador= puntosJugador + valorCarta(carta);
+    console.log({puntosJugador});
+    totalJugador.innerText = puntosJugador;
+
+    //Crear este elemento 
+    //img class="carta" src="/04-BlackJack/assets/cartas/2C.png" alt="Tu carta"\
+    const img = document.createElement('img'); //creamos el <img>
+    img.classList.add('carta');// <img class='carta'>
+    let srcImg = `/04-BlackJack/assets/cartas/${carta}.png`;
+    img.src = srcImg;// img class="carta" src="/04-BlackJack/assets/cartas/2C.png"
+    divsCartasJugador.append(img);
+
+    if(puntosJugador > 21){
+        console.log('Perdiste');
+        btnPedir.disabled = true;
+        btnPlantarse.disabled =  true;
+
+        turnoCrupier();
+    } else if (puntosJugador === 21) {
+        console.warn('Llegaste a 21');
+        btnPedir.disabled = true;
+    }
+});
+
+btnPlantarse.addEventListener('click', function(){
+    btnPedir.disabled = true;
+    btnPlantarse.disabled =  true;
+    turnoCrupier();
+});
+
+btnNuevaPartida.addEventListener('click', () => {
+    console.clear();
+    deck = [];
+    deck = crearDeck();
+    puntosJugador = 0;
+    puntosCrupier = 0;
+    totalJugador.innerText = 0;
+    totalCrupier.innerText = 0;
+    divsCartasJugador.innerHTML = '';
+    divsCartasCrupier.innerHTML = '';
+    btnPedir.disabled = false;
+    btnPlantarse.disabled = false;
+});
 
 
 
