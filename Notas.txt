@@ -17,3 +17,4 @@ El use strict , le dice a javascript que sea esctiroc en evualuar el codigo
 Ayuda a varias cosas por ejemplo que el codigo sea mas limpio. Cuando s eimplenta el patron modulo se deja habilidtado como sugeiran el use strict
 
 Tenamos alguans cosas como el min que es para profduccion donde esta comprmirdo ofuscado etc, mientra que el toro e s el de desarrollo
+05-PatronModulo-optimizaciones/JuegoMejorado/js/juego.js
