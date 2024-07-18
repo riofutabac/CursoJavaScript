@@ -1,41 +1,19 @@
-Temas de la sección
+Patron mdoulo es el patron de diseño mas conocdio de javascript, nos permite encasular el codigo es decir que quede en un contender privado, de tal amnera que nadie de eafura pueda coger las variables, en cosola.
+Existen fucniones anonimas, loq ue signifca que no tiene referncia por nombre porque crean un nuevo escope para esto debe de estar entre paratensis.
+digmaso colcoamos asi 
+(function(){
 
-En esta sección tocaremos los siguientes temas:
+})()
 
-Trabajar con arreglos
+o asi 
+(()=>{
 
-Mezclar los valores de los arreglos
+})();
+son funciones anonimas AUTOINVCADAS
 
-Introducción a la manipulación del DOM
+El patron modulo, no nos permite acceder a las variables por nombre ocmo tal identificador por nombre es muy dificl encontrar eso en memroia
 
-Eventos
+El use strict , le dice a javascript que sea esctiroc en evualuar el codigo
+Ayuda a varias cosas por ejemplo que el codigo sea mas limpio. Cuando s eimplenta el patron modulo se deja habilidtado como sugeiran el use strict
 
-Crear imágenes en la página
-
-Realizar la lógica para implementar un competidor de cartas.
-
-Esta sección es bien divertida (al menos eso espero), haremos un juego que nos enseñará muchas cosas de JavaScript.
-
-
-Tener accesos dinamico con los elementos html dom.
-Buena practica trabajr con querySelector. donde va la referencia al docuemtno y y lo que necesito.
-el query selector busca el tag que pongas el nombre, ahora si necesitamos la clase es . y # de la misma forma que en css.
-Podemos ahcer el mismo resutlado con getelemtnby classname y solo ponemos el nombre, se reomoenicunta coger como qeury selector.
-document.querySelector('header h1').innerText="Alel"
-el inner text sirve para colcoar un texto dentr
-Podemos guardar los elemntos en variables. const totalJugador = document.querySelector("#total-jugador")
-
-el createEleemnt crea un elemento const const botonNuevo = document.createElement('button')
-para anadir una cosa tneemos el apend.
-ahora bien necesitamos agregar clases tnemeso el classList.add, si ncesitmoas agregar id es elemento.id='elemento'.
-
-Si necestitamos escucahr un eevneto btnpedir.AddEnvetlistneer, el primero es ele evneto que estamos escuchando.y luego se envia lo del callback, practimcanete me dice que si le da click en el boton se va ahcer lo de la fucnoin
-    //Crear este elemento 
-    //img class="carta" src="/04-BlackJack/assets/cartas/2C.png" alt="Tu carta"\
-    const img = document.createElement('img'); //creamos el <img>
-    img.classList.add(carta);// <img class='carta'>
-    let srcImg = `/04-BlackJack/assets/cartas/${carta}.png`;
-    img.src = srcImg;// img class="carta" src="/04-BlackJack/assets/cartas/2C.png"
-    divsCartasJugador.append(img);
-
-Para poder desactivar un bton neceisto colcoar el   btnPedir.disabled = true;, en un console log permite colcoar codigo de JavaScript${carta}
+Tenamos alguans cosas como el min que es para profduccion donde esta comprmirdo ofuscado etc, mientra que el toro e s el de desarrollo
