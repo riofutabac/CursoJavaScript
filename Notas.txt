@@ -1,20 +1,72 @@
-Patron mdoulo es el patron de diseño mas conocdio de javascript, nos permite encasular el codigo es decir que quede en un contender privado, de tal amnera que nadie de eafura pueda coger las variables, en cosola.
-Existen fucniones anonimas, loq ue signifca que no tiene referncia por nombre porque crean un nuevo escope para esto debe de estar entre paratensis.
-digmaso colcoamos asi 
-(function(){
+En esta sección tocaremos los siguientes temas:
 
-})()
+Problematica de prototipos
 
-o asi 
-(()=>{
+Clases
 
-})();
-son funciones anonimas AUTOINVCADAS
+Sets
 
-El patron modulo, no nos permite acceder a las variables por nombre ocmo tal identificador por nombre es muy dificl encontrar eso en memroia
+Gets
 
-El use strict , le dice a javascript que sea esctiroc en evualuar el codigo
-Ayuda a varias cosas por ejemplo que el codigo sea mas limpio. Cuando s eimplenta el patron modulo se deja habilidtado como sugeiran el use strict
+Métodos estáticos
 
-Tenamos alguans cosas como el min que es para profduccion donde esta comprmirdo ofuscado etc, mientra que el toro e s el de desarrollo
-05-PatronModulo-optimizaciones/JuegoMejorado/js/juego.js
+Gets estáticos
+
+ESNext: Propiedades privadas (aún no soportado completamente)
+
+Singletons
+
+Multiples constructores
+
+Esta sección es fundamental para la programación moderna de JavaScript, nos servirá mucho en el futuro y recuerden que al final de la sección tienen el código fuente.
+
+
+Antes que todo recorada que appendChild sirve para modifcar lso elemtnos del html y agregarlos como tal es decirle que pone aqui. documenent.body.appendChild(h1), pone ele lemento que colcoamos en esto.
+
+const h1 = document.createElement('h1');
+
+h1.innerText = 'Alexis Lapo';
+
+document.body.appendChild(h1)
+
+sp;p es [ara recprdar
+]
+
+
+Para generar un objeto es parecido a java, pero en este caso lo hacemos como una funcion declaramos los this y y las funciones diciendo que pertenences al objeto.
+Luego de eso para poder hacer tipo objeto podemos decir que alexis = new Persona() siendo el new la instancio y la perosna como funcon que tiene como se comprota dicho objeto.
+
+Clases.
+se tiene la palabra reservada class, ocpamso el camelcase.
+inciamos el consturctor este como sabemos es el metodo que se va a ejeuctorar en ele moemnto que se crea una nueva isntancia de una calse 
+El objetivo de una calse es tner en una isntacia los metoso atiruptuos propeidades que se repeitne ne todos.
+
+scope fracion de codigo , es decir si nosotros en construcotr poenmos codigo = abc, no funca porque es solo de eso y el codigo nos ale al gneeral.
+Un recoradotrio para el uso de clases a fidfrencias de otros lenguajes si nostoros decimso que persona tiene nobmre y apellido  y los poenmos en elcosntructo en java por ejemplo si declarmos una clase y lo isntanciamos sin estos atritbupos da error, javascript no da este error nos manda con undefined.
+Entonces con eso sabemos como declarar un aclase y ocuparla.
+
+Vamos con los metodos
+las declaracioens de lso metodos se acostubmran a estar despue del cosntructor.
+
+Los metodos pones sel nombre como tal y luego lo que se ahcae.
+Sets y Gets
+
+setean datos y obtienes dlso datos.
+propeidades, gets metodosestaticos.
+Lo statico en clases nos sirve para poder usar un atribuo de la clase sin necesidad e isntaciar la msima.
+
+Se puede crear una propeuda estatica desde afuera solo neceismota poner el objeto como taly luego colcar la proieda 
+
+
+subclase
+
+si tnemos lso mismo que otra clase dimaog persona iten nombre apellido y vamos a poenr heroea que solo diferncia una propeida pues podemos pner el extend qeu nos dice que heroe extiende de persona y stiene sus mismo prametro. 
+con la palabra super hacemos refecian a la clase qeu extendmos a su construtor 
+en las calses extendiad tenemos los mismo metodos 
+
+Propiedades privadas
+
+con el #antes dle nombre del apropeidad tenemos proeidads privadas.
+pero para metodos no hay todavia segun lo qeu sabemos
+singleton es una instacia unica de la clasa
+uno de lso benifiocs es poeruqe todso pauntan al mismo espacio en memroai..
