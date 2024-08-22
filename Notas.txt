@@ -55,3 +55,4 @@ netlify nos sirve para despegar aplicacoines qeu no requeiren de codigo de backe
 Los errores pueden salir con import 
 cuando hacemos un build, assets con recursos estaticos, y colcoamso esto en public para que aqui agarre eso. si no hacemos nada de ipmrt peude ir enopublcik
 cuando ponemos el public un arhcivo no es necesrio refecnaiar esta ruta
+Necesi.
