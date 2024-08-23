@@ -1,72 +1,57 @@
-En esta sección tocaremos los siguientes temas:
+Temas puntuales de la sección
+Esta sección es sumamente importante, porque explicamos cosas fundamentales para el desarrollo de aplicaciones de JavaScript moderno.
 
-Problematica de prototipos
+Puntualmente veremos:
 
-Clases
+¿Qué son bundlers?
 
-Sets
+¿Qué es Webpack y TurboPack?
 
-Gets
+¿Qué es Vite?
 
-Métodos estáticos
-
-Gets estáticos
-
-ESNext: Propiedades privadas (aún no soportado completamente)
-
-Singletons
-
-Multiples constructores
-
-Esta sección es fundamental para la programación moderna de JavaScript, nos servirá mucho en el futuro y recuerden que al final de la sección tienen el código fuente.
+¿Por qué queremos utilizar esas herramientas?
 
 
-Antes que todo recorada que appendChild sirve para modifcar lso elemtnos del html y agregarlos como tal es decirle que pone aqui. documenent.body.appendChild(h1), pone ele lemento que colcoamos en esto.
 
-const h1 = document.createElement('h1');
-
-h1.innerText = 'Alexis Lapo';
-
-document.body.appendChild(h1)
-
-sp;p es [ara recprdar
-]
+Y luego, nos moveremos a realizar trabajo con Vite en la aplicación de BlackJack.
 
 
-Para generar un objeto es parecido a java, pero en este caso lo hacemos como una funcion declaramos los this y y las funciones diciendo que pertenences al objeto.
-Luego de eso para poder hacer tipo objeto podemos decir que alexis = new Persona() siendo el new la instancio y la perosna como funcon que tiene como se comprota dicho objeto.
+ES6 es el estandar como tal hasta el momento.
 
-Clases.
-se tiene la palabra reservada class, ocpamso el camelcase.
-inciamos el consturctor este como sabemos es el metodo que se va a ejeuctorar en ele moemnto que se crea una nueva isntancia de una calse 
-El objetivo de una calse es tner en una isntacia los metoso atiruptuos propeidades que se repeitne ne todos.
+Bundlers son empaquetadores, nos permiten desarrollar aplicaciones de javascript en modulos, combinarlo ejecutarlo lista para poderlos usar.
+Lo que hace practicmante es tomar todos los archivos pasas por el bundler y pasar a tener un el progrmar para pdouccion.
+Nos ofrecen formas modernas de trabjar.
+Webpack es el estadnar que casi todos lo usamaos por muchos años.
+Vite es una herramienta que tecnicmatne nos muestra que webpack es muy lento.
+Cambia modulos en caliente.
 
-scope fracion de codigo , es decir si nosotros en construcotr poenmos codigo = abc, no funca porque es solo de eso y el codigo nos ale al gneeral.
-Un recoradotrio para el uso de clases a fidfrencias de otros lenguajes si nostoros decimso que persona tiene nobmre y apellido  y los poenmos en elcosntructo en java por ejemplo si declarmos una clase y lo isntanciamos sin estos atritbupos da error, javascript no da este error nos manda con undefined.
-Entonces con eso sabemos como declarar un aclase y ocuparla.
+tURBOPACK esta escrito en rust, nexts es un frameworkd de react, es otro brundler que no se ocupa mucho todavia esta ahi y ocupa por debajo next.
 
-Vamos con los metodos
-las declaracioens de lso metodos se acostubmran a estar despue del cosntructor.
+Para crear un proyecto como tal ponemos el npm create vite.Vite nos deja trabjar con algunos sabore so algun framwork ppodemos usar el vanilla o rea ejeuctorar
 
-Los metodos pones sel nombre como tal y luego lo que se ahcae.
-Sets y Gets
+El npm install descarga la despendicias
+hasy dos dependecies y devdependeices, dev depdnecies son las dependeicas para consturi el codigo y el dependices nos sirve para produccion commo tal 
+{
+  "name": "vite-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.1"
+  }
+}
 
-setean datos y obtienes dlso datos.
-propeidades, gets metodosestaticos.
-Lo statico en clases nos sirve para poder usar un atribuo de la clase sin necesidad e isntaciar la msima.
+digamos si colcoamos el npm run hace que se vaya al scripts como tal luego de eso colcamos el dev para qeu corra el dev. como tal y asi el vite build y los tors(explica mejor esto.)
+Tenemos el nodemoduels y package json signifca que nuestar aplicaocn es de node.
 
-Se puede crear una propeuda estatica desde afuera solo neceismota poner el objeto como taly luego colcar la proieda 
+El build lo que hace es coger el codigo que temos npm run build y transforma el codigo apra que se pueda ocpar como tal en culiqeur nabegaor como tal 
+netlify nos sirve para despegar aplicacoines qeu no requeiren de codigo de backend como tal, es para depsegar aplciaocnes
 
-
-subclase
-
-si tnemos lso mismo que otra clase dimaog persona iten nombre apellido y vamos a poenr heroea que solo diferncia una propeida pues podemos pner el extend qeu nos dice que heroe extiende de persona y stiene sus mismo prametro. 
-con la palabra super hacemos refecian a la clase qeu extendmos a su construtor 
-en las calses extendiad tenemos los mismo metodos 
-
-Propiedades privadas
-
-con el #antes dle nombre del apropeidad tenemos proeidads privadas.
-pero para metodos no hay todavia segun lo qeu sabemos
-singleton es una instacia unica de la clasa
-uno de lso benifiocs es poeruqe todso pauntan al mismo espacio en memroai..
+Los errores pueden salir con import 
+cuando hacemos un build, assets con recursos estaticos, y colcoamso esto en public para que aqui agarre eso. si no hacemos nada de ipmrt peude ir enopublcik
+cuando ponemos el public un arhcivo no es necesrio refecnaiar esta ruta
