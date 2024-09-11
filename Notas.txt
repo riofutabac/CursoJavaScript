@@ -1,102 +1,44 @@
 Temas puntuales de la sección
-Esta sección es sumamente importante, porque explicamos cosas fundamentales para el desarrollo de aplicaciones de JavaScript moderno.
+Esta sección es un ejercicio para practicar varios conceptos como:
 
-Puntualmente veremos:
+Scopes
 
-¿Qué son bundlers?
+Variables locales
 
-¿Qué es Webpack y TurboPack?
+Store global
 
-¿Qué es Vite?
+Módulos
 
-¿Por qué queremos utilizar esas herramientas?
+LocalStorage
 
+Session Storage
 
+Despliegues
 
-Y luego, nos moveremos a realizar trabajo con Vite en la aplicación de BlackJack.
+Vite
 
+Documentación de funciones
 
-ES6 es el estandar como tal hasta el momento.
-
-Bundlers son empaquetadores, nos permiten desarrollar aplicaciones de javascript en modulos, combinarlo ejecutarlo lista para poderlos usar.
-Lo que hace practicmante es tomar todos los archivos pasas por el bundler y pasar a tener un el progrmar para pdouccion.
-Nos ofrecen formas modernas de trabjar.
-Webpack es el estadnar que casi todos lo usamaos por muchos años.
-Vite es una herramienta que tecnicmatne nos muestra que webpack es muy lento.
-Cambia modulos en caliente.
-
-tURBOPACK esta escrito en rust, nexts es un frameworkd de react, es otro brundler que no se ocupa mucho todavia esta ahi y ocupa por debajo next.
-
-Para crear un proyecto como tal ponemos el npm create vite.Vite nos deja trabjar con algunos sabore so algun framwork ppodemos usar el vanilla o rea ejeuctorar
-
-El npm install descarga la despendicias
-hasy dos dependecies y devdependeices, dev depdnecies son las dependeicas para consturi el codigo y el dependices nos sirve para produccion commo tal 
-{
-  "name": "vite-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.4.1"
-  }
-}
-
-digamos si colcoamos el npm run hace que se vaya al scripts como tal luego de eso colcamos el dev para qeu corra el dev. como tal y asi el vite build y los tors(explica mejor esto.)
-Tenemos el nodemoduels y package json signifca que nuestar aplicaocn es de node.
-
-El build lo que hace es coger el codigo que temos npm run build y transforma el codigo apra que se pueda ocpar como tal en culiqeur nabegaor como tal 
-netlify nos sirve para despegar aplicacoines qeu no requeiren de codigo de backend como tal, es para depsegar aplciaocnes
-
-Los errores pueden salir con import 
-cuando hacemos un build, assets con recursos estaticos, y colcoamso esto en public para que aqui agarre eso. si no hacemos nada de ipmrt peude ir enopublcik
-cuando ponemos el public un arhcivo no es necesrio refecnaiar esta ruta
-Necesi.
-
-Digamso als fucnones podmeos psdarlas a archivos de js par qeu tengas una responsalibidad como tal depnde del patron de diseño como tal de como quieres qeu le hagas, entonces aqui algo iprotnate dqeu eparndie es qeu nosotros colcoamos el import y coclaomso que queremos improtar de algo no el nombre como tal luego de eso ponesmo de donde quermeos e entre comilal sismples, y bueno una cosas ipmrntan psi colcoamso que algo se improte necesitoamos  que en ese archivo se esporte comot al entonces la cosa viene ahi export nos da la fucnoa de exportan la funcon como tal par que sea accesible
-nostros temeos esto import {crearDeck as crearNuevoDeck} from './usecases/create-deck';
-
-que podemso nombrar a la exportaicon como queramso para ocuparla
-tambien ay una exportaiocn por defaecto solo ponemos debajo default... y lsito.
-solo podemos tenr una exportaicon por  archivo (creo afirma esto se objeito en caso de qeu no sea correcto coggire)
-para docuemtonar el codigo dtnemso el params 
-/**
- * Crea un mazo de cartas barajado.
- *
- * Esta función genera un mazo de cartas a partir de los tipos de cartas y las cartas mayores especificados. 
- * Cada carta se representa como una cadena que combina un valor numérico (2-10 o una carta mayor) y un tipo.
- *
- * @param {string[]} tiposCartas - Un arreglo de cadenas que representan los tipos de cartas posibles (e.g., 'C', 'D', 'T', 'P').
- * @param {string[]} cartasMayor - Un arreglo de cadenas que representan las cartas mayores (e.g., 'J', 'Q', 'K', 'A').
- * @returns {string[]} - Un arreglo de cadenas que representa las cartas del mazo barajado.
- *
- * @throws {Error} Si no se proporciona un arreglo de tipos de cartas.
- */
-
- dpmne colcoasmo entre llaves el tipo de dato a ladoa la varible como tal 
- el retonro ya fuare de s o podemos pone una leyenda de lo que acmeos.
-
- debemos mandar y contorlar las cosas y funcoens 
+La idea es practicar la manipulación del DOM y mantener un estado global de nuestra aplicación.
 
 
- hay un apatado de duda de com ofuncona javascript en comparicon a las otrass fucines segun dyo
- Ejecución secuencial inicial: Cuando cargas la página, JavaScript ejecuta el código línea por línea, desde arriba hacia abajo. Esto incluye crear el mazo inicial, configurar variables y establecer los eventos.
-Eventos como interrupciones: Los eventos como los clics actúan como interrupciones en esta ejecución secuencial. Cuando haces clic en un botón, el JavaScript "pausa" lo que estaba haciendo y se dirige a ejecutar el código asociado a ese evento (la función del manejador de eventos).
-Enfoque en la función del evento: Mientras se está ejecutando la función del evento, el resto del código "espera". Esto significa que si estás en medio de una partida y haces clic en "Nueva Partida", el juego se pausa momentáneamente para iniciar una nueva partida.
-Retorno a la ejecución normal: Una vez que la función del evento termina, el JavaScript vuelve a donde se quedó antes de la interrupción. Sin embargo, en muchos casos, los eventos pueden desencadenar cambios que afectan el estado general del programa, como crear un nuevo mazo o actualizar la puntuación.
-la cosa es que mi duda es digamso por lo general cuadno uno ejecuta una fucion lo que hace normalemtne es esto, entra a la funcion y ejecuta lo que pasa afuera, en javascript no eintindo muy biene ste flujo porque ya ejucto todo le damos click a algo y ejecuta esto y cuando sale que hace eso es mi duda que ejecuta hacia dodne se va, porque seugn yo creia que volvia desde el incio a ejcutar todo de nuevo de arrib aa bjao pero no lo hace lo que hace es quedarse en el punto de interrupcion ys eguir, y si acabo pues se queda ahi hasta otro evento.
+Una cosa importnate para la importancion de un archivo html es que siempre se espera una archivo js o algo asi, por eso vite dice que un html como tal no rescie pero esto solucionamos porneindo el html?raw,por ejemplo.import html from './app.html?raw';
 
+La idea del store, significa que vamos a buscar la informacion en el sotre y no al padre, en lugar de consultarlo al componente vamos a consutlar en un espacio espaciel donde tengamos la ingformcioan., la libreria, (piña,real estulti).definidmos como vamos a tner ele estaod global de nu4estra aplciacon.
+Explicación del concepto de "store":
+Un "store" en JavaScript es como una caja central donde guardamos toda la información importante de nuestra aplicación. Imagina que estás organizando una fiesta:
 
-Existen archivos de bariil de termino, este temrino es tner un js dodne tnetmos los importar y solo oclcoamso lso exportor en tontal par aluego solo ahce un improt por emep,pmlo
-import { crearDeck,pedirCarta, valorCarta } from './usecases/index';
+La caja (store) contiene la lista de invitados, la comida, la música, etc.
+Cuando quieres saber algo sobre la fiesta, miras en la caja.
+Si quieres cambiar algo, como añadir un invitado, lo haces en la caja.
+Todos los que ayudan con la fiesta usan la misma caja, así todos tienen la misma información actualizada.
 
-y asi queda el idnex.js con otod nuestro export {crearDeck } from './create-deck';
-export {pedirCarta} from './pedir-carta';
-export {valorCarta} from './valor-carta'
+Un store es parte de un patrón de diseño en programación, específicamente del patrón de gestión de estado. Es una forma de organizar y manejar los datos en una aplicación, especialmente en aplicaciones de cierta complejidad.
+Imagina el store como el cerebro central de tu aplicación:
 
- el modular nuestra app nos rivio tner un mejro contrl de todo .
- 
+Centralización de datos: Es como una gran biblioteca donde guardas toda la información importante de tu app.
+Fuente única de verdad: Todos los componentes de tu app consultan este "cerebro" para saber qué está pasando.
+Control de cambios: Cuando algo cambia en la app, se actualiza en el store, y luego el store informa a las partes interesadas.
+Predictibilidad: Al tener un lugar centralizado para los cambios, es más fácil entender cómo y por qué cambia el estado de tu app.
+
+poara generar identificadores unico uuid es un apaeute como tal, 
