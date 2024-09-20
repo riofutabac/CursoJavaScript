@@ -42,3 +42,24 @@ Control de cambios: Cuando algo cambia en la app, se actualiza en el store, y lu
 Predictibilidad: Al tener un lugar centralizado para los cambios, es más fácil entender cómo y por qué cambia el estado de tu app.
 
 poara generar identificadores unico uuid es un apaeute como tal, 
+
+En los erroes de exportancion de cosas es importnate tner en visto que nos falta digmaoas cuando solo es una cosa que exportmaos de un js, solo poenitndo como tal el nombre que queremos y el archivo js bast poer en nuestro todo store tnemos muchso export, entonces debmeos asi mismo o solo llamar lo que ncesitmaos o por el as
+import * as todoStore from '/src/store/todo.store.js';
+El error que estás viendo sugiere que en alguna parte de tu código (probablemente en main.js) estás intentando importar el módulo todo.store.js como un default export, pero el módulo está utilizando named exports.
+Aquí hay dos formas de resolver este problema:
+
+Cambiar la importación en main.js:
+
+Si estás importando en main.js de esta manera:
+javascriptCopyimport todoStore from '/src/store/todo.store.js';
+Deberías cambiarlo a:
+javascriptCopyimport * as todoStore from '/src/store/todo.store.js';
+O, si solo necesitas funciones específicas:
+javascriptCopyimport { initStore, addTodo, getTodos } from '/src/store/todo.store.js';
+Sintaxis: document.querySelector('selector'). Aquí, selector puede ser un nombre de clase (.mi-clase), un id (#mi-id), o cualquier otro selector CSS.
+improtante recoerdadr el query selector para buscar a la calse es .miclase y para buscar por ahi es id
+el query selector solo devuvle el primero dde todos los elementos mientras que el otro deuvle solo el unico
+getElementById solo selecciona por id y siempre selecciona un único elemento.
+querySelector es más flexible porque acepta cualquier selector CSS válido y selecciona el primer elemento que coincida.
+1. Seleccionar todos los elementos de una clase
+Usa document.querySelectorAll('.mi-clase'), que devolverá una lista de nodos con todos los elementos que coinciden con la clase especificada.
