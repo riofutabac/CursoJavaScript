@@ -4,12 +4,17 @@ export const App = (elementId) => {
 
     const displayTodos = (todoStore) => {
         let list = document.querySelector('.todo-list');  
-        let datos = todoStore.getTodos();
+        let datos = todoStore.getTodos(todoStore.getCurrentFilter());
         list.innerHTML = '';  
-        
+     
         for (let i = 0; i < datos.length; i++) {
 
             let item = document.createElement("li");
+            item.setAttribute('data-id', datos[i].id);
+
+            if(datos[i].done){
+                item.classList('completed')
+            }
 
             let vista = document.createElement("div");
             vista.classList.add("view");
@@ -32,7 +37,6 @@ export const App = (elementId) => {
             list.appendChild(item);
         }
     };
-
 
     (() => {
         const app = document.createElement('div');
